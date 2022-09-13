@@ -32,15 +32,15 @@
 <!-- Fungsi -->
 ## Fungsi
 Fungsi dari Website MyStreamingList ini adalah sebagai berikut:
-• Menambahkan judul film/acara TV/series/drama pada list yang bisa dikategorikan.
-• Menampilkan dan update judul film/series/drama juga tahun terbitnya.
+ - Menambahkan judul film/acara TV/series/drama pada list yang bisa dikategorikan.
+ - Menampilkan dan update judul film/series/drama juga tahun terbitnya.
 
 <!-- Tujuan -->
 ## Tujuan
 Tujuan dari Website MyStreamingList ini adalah sebagai berikut:
-• Memudahkan pecinta film/acara TV/series/drama dalam mengetahui judul mana yang  belum ditonton.
-• Memudahkan pecinta film/acara TV/series/drama  melihat history tontonannya. 
-• Mengingatkan pecinta film/acara TV/series/drama melalui notifikasi pada saat tanggal/waktu menunjukkan untuk menonton sesuai yang telah disetting masing-masing pengguna.
+ - Memudahkan pecinta film/acara TV/series/drama dalam mengetahui judul mana yang  belum ditonton.
+ - Memudahkan pecinta film/acara TV/series/drama  melihat history tontonannya. 
+ - Mengingatkan pecinta film/acara TV/series/drama melalui notifikasi pada saat tanggal/waktu menunjukkan untuk menonton sesuai yang telah disetting masing-masing pengguna.
 
 <!-- Target Pengguna -->
 ## Target Pengguna
