@@ -76,15 +76,6 @@ footer {    /*bagian copyright*/
 .section {  /*dari header ke konten dashboard*/
     padding: 20px 0;
 }
-.btn {      /*untuk login button*/
-    padding: 9px 25px;
-    background-color: #8332d3;
-    color:#FFFFFF;
-    margin: 15px 0px;
-    border:none;
-    cursor:pointer;     /*ngerubah bentuk kursor pas nyampe di tombol login*/
-    
-}
 .btn2 {      /*untuk login button*/
     padding: 8px 20px;
     background-color: #8332d3;
@@ -93,4 +84,30 @@ footer {    /*bagian copyright*/
     color:#FFFFFF;
     border:none;
     cursor:pointer;     /*ngerubah bentuk kursor pas nyampe di tombol login*/
+}
+
+textarea {
+    resize: none;
+}
+
+img {
+    width: 50px;
+    height: auto;
+}
+
+#form {
+    border-radius: 5px;
+    width: 40%;
+    margin: auto;
+    background-color: #fff;
+    padding: 30px;
+}
+
+#output {
+    /* background-color: #fff; */
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 10px 20px;
 }

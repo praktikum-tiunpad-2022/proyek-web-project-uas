@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Biodata</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="">
+    <link rel="stylesheet" href="./bootstrap/bootstrap-css/bootstrap.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+			<h1><a href="dashboard.html"></a>MyStreamingList</h1>
+			<ul>
+				<li><a href=" ">
+					<div class="btn2">Logout</div>
+				</a></li>
+				</ul>
+		</div>
+    </header>
+
+    <div id="form">
+        <div id="nama-input" class="mb-3">
+            <label for="name" class="label-form">Nama</label>
+            <input id="nama" class="form-control" type="text" placeholder="Nama Lengkap" autocomplete="off">
+        </div>
+        <div class="row mb-3 g-3">
+            <div class="col">
+                <label for="tpt_lahir">Tempat Lahir</label>
+                <input type="text" id="tpt_lahir" name="tpt_lahir" class="form-control" placeholder="Tempat Lahir"
+                    autocomplete="off" required>
+            </div>
+            <div class="col">
+                <label for="tgl_lahir">Tanggal Lahir</label>
+                <input type="date" id="tgl_lahir" name="tgl_lahir" class="form-control" required>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="alamat" class="label-form">Alamat</label>
+            <textarea class="form-control" name="alamat" id="alamat" placeholder="Alamat Lengkap"></textarea>
+        </div>
+        <div id="email-input" class="mb-3">
+            <label for="email" class="label-form">Email</label>
+            <input id="nama" class="form-control" type="email" placeholder="Alamat Email" autocomplete="off">
+        </div>
+        <div id="telp-input" class="mb-3">
+            <label for="phone" class="label-form">Nomor Telepon</label>
+            <input id="phone" class="form-control" type="number" placeholder="Nomor Telepon Pribadi" autocomplete="off">
+        </div>
+        <div id="jk" class="mb-3">
+            <label for="genders" class="label-form">Jenis Kelamin</label>
+            <div id="genders">
+                <input type="radio" class="btn-check" name="jk" id="laki" value="Laki-Laki" autocomplete="off">
+                <label class="btn btn-outline-primary" for="laki">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-gender-male" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2H9.5zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" />
+                    </svg>
+                    Laki-laki
+                </label>
+                <input type="radio" class="btn-check" name="jk" id="perempuan" value="Perempuan" autocomplete="off">
+                <label class="btn btn-outline-danger" for="perempuan">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-gender-female" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5z" />
+                    </svg>
+                    Perempuan
+                </label>
+            </div>
+        </div>
+        <div id="agree-input" class="mb-3">
+            <input id="agree" name="agree" type="checkbox" value="agree">
+            <label for="agree" class="label-form">Saya menyetujui untuk berlangganan newsletter dari MyStreamingList</label><br>
+        </div>
+        <div class="btn mx-auto d-block">
+            <button id="submit" type="button" class="btn btn-dark">Submit</button>
+            <button id="reset" type="button" class="btn btn-outline-danger" onclick="location.reload()">Reset</button>
+        </div>
+    </div>
+
+    <div id="output">
+        <script src="./bio.js"></script>
+        <script src="./bootstrap/bootstrap-js/bootstrap.js"></script>
+    </div>
+
+    <footer>
+        <small>Copyright &copy; 2022 - Felicia Natania - Tugas Pertemuan 4 Praktikum Pemrograman Web 2022</small>
+    </footer>
+</body>
+
+</html>
