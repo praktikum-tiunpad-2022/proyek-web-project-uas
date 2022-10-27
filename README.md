@@ -1,68 +1,56 @@
-<p align="center">
-  <h2 align="center">
-    Website MyStreamingList
-    <h4 align="center">
-    Website untuk listing, tracking, dan organizing daftar tontonan seperti film, acara TV, series, maupun drama
-  </h4>
-  </h2>
-</p>
+# CodeIgniter 4 Framework
 
-<!-- Daftar Isi -->
-<details open="open">
-  <summary><h2 style="display: inline-block">Daftar Isi</h2></summary>
-  <ol>
-    <li><a href="#anggota-tim">Anggota Tim</a></li>
-    <li><a href="#fungsi">Fungsi</a></li>
-    <li><a href="#tujuan">Tujuan</a></li>
-    <li><a href="#target-pengguna">Target Pengguna</a></li>
-    <li><a href="#mockup-kasar-sederhana">Mockup Kasar Sederhana</a></li>
-    <li><a href="#skema-database">Skema Database</a></li>
-    <li><a href="#lisensi">Lisensi</a></li>
-  </ol>
-</details>
+## What is CodeIgniter?
 
-<!-- Anggota Tim -->
-## Anggota Tim
-| NPM           | Nama             |
-| ------------- |------------------|
-| 140810210007  | Felicia Natania  |
-| 140810210005  | Aliya Rahmania   |
-| 140810210017  | Adinda Salsabila |
+CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
+More information can be found at the [official site](http://codeigniter.com).
 
-<!-- Fungsi -->
-## Fungsi
-Fungsi dari Website MyStreamingList ini adalah sebagai berikut:
- - Menambahkan judul film/acara TV/series/drama pada list yang bisa dikategorikan.
- - Menampilkan dan update judul film/series/drama juga tahun terbitnya.
+This repository holds the distributable version of the framework,
+including the user guide. It has been built from the
+[development repository](https://github.com/codeigniter4/CodeIgniter4).
 
-<!-- Tujuan -->
-## Tujuan
-Tujuan dari Website MyStreamingList ini adalah sebagai berikut:
- - Memudahkan pecinta film/acara TV/series/drama dalam mengetahui judul mana yang  belum ditonton.
- - Memudahkan pecinta film/acara TV/series/drama  melihat history tontonannya. 
- - Mengingatkan pecinta film/acara TV/series/drama melalui notifikasi pada saat tanggal/waktu menunjukkan untuk menonton sesuai yang telah disetting masing-masing pengguna.
+More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
 
-<!-- Target Pengguna -->
-## Target Pengguna
-Target pengguna dari Website MyStreamingList ialah semua orang yang memiliki hobi menonton khusunya bagi pecinta series/film agar dapat mengorganisir urutan tontonannya sehingga lebih mudah mengetahui tontonan yang belum ditonton.
-
-<!-- Mockup Kasar Sederhana -->
-## Mockup Kasar Sederhana
-Berikut beberapa gambar yang menunjukkan rancangan antarmuka (interface) dari program yang ingin dibuat.
-![](images/homepage.jpg)
+The user guide corresponding to this version of the framework can be found
+[here](https://codeigniter4.github.io/userguide/).
 
 
-![](images/login.jpg)
+## Important Change with index.php
 
+`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
+for better security and separation of components.
 
-![](images/signup.jpg)
+This means that you should configure your web server to "point" to your project's *public* folder, and
+not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
+framework are exposed.
 
+**Please** read the user guide for a better explanation of how CI4 works!
 
-<!-- Skema Database -->
-## Skema Database
-![](images/skemadatabase.jpg)
+## Repository Management
 
-<!-- Lisensi -->
-## Lisensi
+We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
+We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
+FEATURE REQUESTS.
 
-MIT License 2022
+This repository is a "distribution" one, built by our release preparation script.
+Problems with it can be raised on our forum, or as issues in the main repository.
+
+## Contributing
+
+We welcome contributions from the community.
+
+Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
+
+## Server Requirements
+
+PHP version 7.4 or higher is required, with the following extensions installed:
+
+- [intl](http://php.net/manual/en/intl.requirements.php)
+- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+
+Additionally, make sure that the following extensions are enabled in your PHP:
+
+- json (enabled by default - don't turn it off)
+- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
+- xml (enabled by default - don't turn it off)

@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    background-image: url(images/wallpaper.jpg);
+}
+footer {    /*bagian copyright*/
+    padding: 40px 0 5px 0;      /*atas kanan bawah kiri*/
+    text-align: center;
+}
+
+.container-box {      /*untuk kotak update profil dan ubah password*/
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    padding: 25px;
+    box-sizing: border-box;
+    margin: 10px 0 0 25%;
+    width: 50%;
+
+}
+/*kolom login*/
+.box {      /*untuk kotak update profil dan ubah password*/
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    padding: 25px;
+    box-sizing: border-box;
+    margin: 10px 0 25px 0;
+}
+.box-login {    /*untuk kotak login*/
+    margin: 100px auto 40px;
+    width: 240px;
+    min-height: 300px;
+    border: 1px solid #000000;
+    background-color: #FFFFFF;
+    padding: 25px;      /*untuk pinggiran sampingnya*/
+    box-sizing: border-box;
+    float: center;
+}
+.box-login h5 {      /*untuk Login*/
+    text-align: center;
+    margin-top: 0px;       /*untuk jarak batas kotak ke 'Login'*/
+    margin-bottom: 30px;        /*untuk jarak setelah 'Login' dan kotak NPM*/
+    font-size: 18pt;
+}
+.input-control {     /*untuk isian input*/
+    width: 100%;
+    padding: 3px;       /*size kotaknya*/
+    margin-bottom: 20px;
+    box-sizing: border-box;     /*supaya ngga keluar box*/
+}
+.section {  /*dari header ke konten dashboard*/
+    padding: 20px 0;
+}
+.btn {      /*untuk login button*/
+    padding: 8px 20px;
+    margin-right: 2%;
+    background-color: #EBECF0;
+    margin-top: 3px;
+    margin-bottom: 20px;
+    border:none;
+    cursor:pointer;     /*ngerubah bentuk kursor pas nyampe di tombol login*/
+}
+.btn-clear {      /*untuk login button*/
+    padding: 8px 20px;
+    margin-left: 30px;
+    color:#FFFFFF;
+    border:none;
+    cursor:pointer;     /*ngerubah bentuk kursor pas nyampe di tombol login*/
+}
+.btn2 {      /*untuk login button*/
+    padding: 8px 20px;
+    background-color: #EBECF0;
+    margin-top: 20px;
+    margin-left: 30px;
+    color:#000000;
+    text-decoration: none;
+    border:none;
+    cursor:pointer;     /*ngerubah bentuk kursor pas nyampe di tombol login*/
+}
+.btn-login {      /*untuk login button*/
+    padding: 8px 20px;
+    background-color: #EBECF0;
+    margin-top: 20px;
+    margin-left: 55px;
+    color:#000000;
+    text-decoration: none;
+    border:none;
+    cursor:pointer;     /*ngerubah bentuk kursor pas nyampe di tombol login*/
+}
+.btn-alert {      /*untuk login button*/
+    padding: 8px 30px;
+    background-color: #E74C3C;
+    margin-top: 20px;
+    margin-left: 125px;
+    color:#FFFFFF;
+    text-decoration: none;
+    border:none;
+    cursor:pointer;     /*ngerubah bentuk kursor pas nyampe di tombol login*/
+}
+.btn-okay {      /*untuk login button*/
+    padding: 8px 20px;
+    background-color: #757575;
+    margin-top: 20px;
+    margin-left: 60px;
+    color:#FFFFFF;
+    text-decoration: none;
+    border:none;
+    cursor:pointer;     /*ngerubah bentuk kursor pas nyampe di tombol login*/
+}
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+textarea {
+    resize: none;
+}
+
+img {
+    width: 50px;
+    height: auto;
+}
+
+#form {
+    border-radius: 5px;
+    width: 50%;
+    margin: auto;
+    background-color: #fff;
+    padding: 30px;
+}
+
+#output {
+    /* background-color: #fff; */
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
