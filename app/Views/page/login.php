@@ -19,11 +19,33 @@
 <body>
 	<div class="box-login">
 		<h5 style="text-align: center;"><b>Login to MyStreamingList</b></h5>
-		<form action="">
+		<form action="" method="POST">
 			<input type="text" name="user" placeholder="Username/Email" class="input-control">
 			<input type="password" name="pass" placeholder="Password" class="input-control">
 			<input type="submit" name="submit" value="Login" class="btn-login">
 		</form>
+		<?php
+		if (isset($_POST['submit'])) {
+			session_start();
+			include 'index.php';
+			$user = $_POST['user'];
+			$pass = $_POST['pass'];
+
+			$sql = mysqli_query($koneksi, "SELECT * FROM users WHERE username = '" . $user . "' OR email = '" . $user . "' AND password = '" . MD5($pass) . "'");
+			
+			if (mysqli_num_rows($sql) > 0) {
+				$row = mysqli_fetch_assoc($sql);
+				$_SESSION['level'] = $row["level"];
+				$_SESSION['user'] = $row["username"];
+				echo '<script>window.location="/dashboard"</script>';	/*untuk lanjut ke dashboard*/
+			} 
+			else {
+				echo '<script>alert("Username atau Password Anda salah!")</script>';	/*munculin notif gagal login*/
+			}
+		}
+		?>
+		<p style="text-align: center; margin-top: 30px;"><a href="password">Forgot Password</a></p>
+		<p style="text-align: center;">Don't have an account yet? <br><a href="register">Sign Up</a> here</p>
 	</div>
 
 	<footer>

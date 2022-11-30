@@ -35,7 +35,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'pemweb_project',
+        'database' => 'dbstreaming',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,

@@ -32,8 +32,8 @@ footer {    /*bagian copyright*/
     margin: 10px 0 25px 0;
 }
 .box-login {    /*untuk kotak login*/
-    margin: 100px auto 40px;
-    width: 240px;
+    margin: 40px auto 40px;
+    width: 310px;
     min-height: 300px;
     border: 1px solid #000000;
     background-color: #FFFFFF;
@@ -48,9 +48,9 @@ footer {    /*bagian copyright*/
     font-size: 18pt;
 }
 .input-control {     /*untuk isian input*/
-    width: 100%;
+    width: 80%;
     padding: 3px;       /*size kotaknya*/
-    margin-bottom: 20px;
+    margin: 10px 25px;
     box-sizing: border-box;     /*supaya ngga keluar box*/
 }
 .section {  /*dari header ke konten dashboard*/
@@ -86,7 +86,17 @@ footer {    /*bagian copyright*/
     padding: 8px 20px;
     background-color: #EBECF0;
     margin-top: 20px;
-    margin-left: 55px;
+    margin-left: 85px;
+    color:#000000;
+    text-decoration: none;
+    border:none;
+    cursor:pointer;     /*ngerubah bentuk kursor pas nyampe di tombol login*/
+}
+.btn-register {      /*untuk login button*/
+    padding: 8px 20px;
+    background-color: #EBECF0;
+    margin-top: 20px;
+    margin-left: 75px;
     color:#000000;
     text-decoration: none;
     border:none;
