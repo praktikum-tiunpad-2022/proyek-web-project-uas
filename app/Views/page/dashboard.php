@@ -75,9 +75,9 @@ $row = $hasil->fetch_assoc();
 		</div>
 	</header>
 	<div class="section">
-		<div class="container2">
+		<div class="container3">
 			<h3>Dashboard</h3>
-			<div class="box">
+			<div class="box2">
 				<h4>Selamat Datang, <?php echo $row['nama'] ?>!</h4>
 				<p>Click <a href="streaming">here</a> to continue to List</p>
 			</div>

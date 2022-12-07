@@ -32,6 +32,11 @@ footer {    /*bagian copyright*/
     float: left; /*kalo mau rata kiri*/
     margin: 0 0 50px 100px;
 }
+.container3 {       /*ngatur kotak update profil admin*/
+    float: left; /*kalo mau rata kiri*/
+    margin: 0 0 50px 100px;
+    width: 90%;
+}
 body {
     background-image: url(images/wallpaper.jpg);
     background-size: 1280px 959px;
@@ -63,6 +68,12 @@ body {
     border: 1px solid #CCCCCC;
     padding: 15px;
     width: 90%;
+}
+.box4 {      /*untuk kotak update profil dan ubah password*/
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    padding: 15px;
+    width:100%;
 }
 .box-login {    /*untuk kotak login*/
     margin: 40px auto 40px;
