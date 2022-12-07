@@ -1,6 +1,7 @@
-<?= $this->extend('/base'); ?>
-
-<?= $this->section('content'); ?>
+<?php
+session_start();
+include 'index.php';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,11 +20,27 @@
 <body>
 	<div class="box-login">
 		<h5 style="text-align: center;"><b>Forgot Password</b></h5>
-		<form action="">
+		<form action="" method="post">
 			<input type="text" name="user" placeholder="Username/Email" class="input-control">
 			<input type="password" name="pass" placeholder="New Password" class="input-control">
 			<input type="submit" name="submit" value="Submit" class="btn-login">
 		</form>
+		<?php
+                if (isset($_POST['submit'])) {
+                    $username = ($_POST['user']);
+                    $pass = $_POST['pass'];
+
+                    $update = mysqli_query($koneksi, "UPDATE users SET password='" . MD5($pass) . "'
+                                                                    where username='" . $username . "'
+																	or email='" . $username . "'");
+                    if ($update) {
+                        echo '<script>alert("Password berhasil diperbarui!")</script>';
+                        echo '<script>window.location="/"</script>';
+                    } else {
+                        echo 'Data gagal diperbarui!' . mysqli_error($koneksi);
+                    }
+                }
+                ?>
 	</div>
 
 	<footer>
@@ -32,5 +49,3 @@
 </body>
 
 </html>
-
-<?= $this->endSection('content'); ?>

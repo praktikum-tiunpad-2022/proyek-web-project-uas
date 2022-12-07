@@ -35,17 +35,23 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
 $routes->get('/dashboard', 'Page::dashboard');
 $routes->get('/', 'Page::login');
 $routes->get('/logout', 'Page::logout');
 $routes->get('/register', 'Page::register');
-$routes->get('/profile', 'Page::profile');
 $routes->get('/password', 'Page::password');
+$routes->get ('/streaming', 'Page::streaming');
+$routes->get ('/edit', 'Page::edit');
+$routes->get ('/add', 'Page::add');
+$routes->get ('/delete', 'Page::delete');
 
 $routes->post('/', 'Page::login');
 $routes->post('/register', 'Page::register');
-$routes->post('/profile', 'Page::profile');
 $routes->post('/password', 'Page::password');
+$routes->post ('/edit', 'Page::edit');
+$routes->post ('/add', 'Page::add');
+
 
 /*
  * --------------------------------------------------------------------

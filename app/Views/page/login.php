@@ -1,7 +1,3 @@
-<?= $this->extend('/base'); ?>
-
-<?= $this->section('content'); ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,6 +13,24 @@
 </head>
 
 <body>
+<header>
+        <div class="container" style="background-color: #555555; color: #ffffff;">
+            <ul style="list-style-type: none;">
+                <li style="display: inline-block">
+                    <h1><a href="dashboard"></a>MyStreamingList</h1>
+                </li>
+                    <li style="display: inline-block; float: right; margin-left:20px;"><a href="login">
+                            <div class="btn2">Login</div>
+                        </a>
+                    </li>
+                    <li style="display: inline-block;  float: right;";><a href="register">
+                            <div class="btn2">Sign Up</div>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </header>
+
 	<div class="box-login">
 		<h5 style="text-align: center;"><b>Login to MyStreamingList</b></h5>
 		<form action="" method="POST">
@@ -54,5 +68,3 @@
 </body>
 
 </html>
-
-<?= $this->endSection('content'); ?>
