@@ -15,13 +15,6 @@ header {    /*dasar header*/
     background-color: #555555;
     color: #FFFFFF;
 }
-header ul li {  /*supaya tombol login sejajar ma logo unpad*/
-    /* display: inline-block; */
-}
-header ul li a { /*jarak logo and tombol login ke header bawah*/
-    /* display: inline-block;
-    padding: 0 0 0 10px; */
-}
 footer {    /*bagian copyright*/
     padding: 50px 0 5px 0;      /*atas kanan bawah kiri*/
     text-align: center;
@@ -36,12 +29,12 @@ footer {    /*bagian copyright*/
     clear: both;
 }
 .container2 {       /*ngatur kotak update profil admin*/
-    width: 100%;
     float: left; /*kalo mau rata kiri*/
     margin: 0 0 50px 100px;
 }
 body {
     background-image: url(images/wallpaper.jpg);
+    background-size: 1280px 959px;
 }
 .container-box {      /*untuk kotak update profil dan ubah password*/
     background-color: #FFFFFF;
@@ -57,7 +50,19 @@ body {
     background-color: #FFFFFF;
     border: 1px solid #CCCCCC;
     padding: 15px;
-    width: 80%;
+    width: 40%;
+}
+.box3 {      /*untuk kotak update profil dan ubah password*/
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    padding: 15px;
+    width:75%;
+}
+.box2 {      /*untuk kotak update profil dan ubah password*/
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    padding: 15px;
+    width: 90%;
 }
 .box-login {    /*untuk kotak login*/
     margin: 40px auto 40px;
@@ -140,7 +145,7 @@ body {
 .btn-okay {      /*untuk login button*/
     padding: 8px 20px;
     background-color: #757575;
-    margin-top: 20px;
+    margin-bottom: 15px;
     color:#FFFFFF;
     text-decoration: none;
     border:none;

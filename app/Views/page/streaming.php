@@ -29,11 +29,11 @@ $username = $_SESSION["user"];
                 <?php
                 if ($_SESSION['level'] == "") {
                 ?>
-                    <li style="display: inline-block; float: left;"><a href="login">
+                    <li style="display: inline-block; float: right;"><a href="login">
                             <div class="btn2">Login</div>
                         </a>
                     </li>
-                    <li style="display: inline-block;  float: left;" ;><a href="register">
+                    <li style="display: inline-block;  float: right;" ;><a href="register">
                             <div class="btn2">Sign Up</div>
                         </a>
                     </li>
@@ -43,8 +43,16 @@ $username = $_SESSION["user"];
                 <?php
                 if ($_SESSION['level'] == "1" || $_SESSION['level'] == "2") {
                 ?>
-                    <li style="display: inline-block; float: right;"><a href="logout">
+                    <li style="display: inline-block; float: right; margin-left:20px;"><a href="logout">
                             <div class="btn2">Logout</div>
+                        </a>
+                    </li>
+                    <li style="display: inline-block; float: right; margin-left:20px"><a href="dashboard">
+                            <div class="btn2">Dashboard</div>
+                        </a>
+                    </li>
+                    <li style="display: inline-block; float: right;"><a href="profile">
+                            <div class="btn2">Profil</div>
                         </a>
                     </li>
                 <?php
@@ -57,7 +65,7 @@ $username = $_SESSION["user"];
     <div class="section">
         <div class="container2">
             <h3>Data Streaming</h3>
-            <div class="box">
+            <div class="box2">
                 <p>
                     <a href="/add">
                         <div class="btn-okay" style="margin-bottom:20px;">Tambah Data</div>
@@ -140,10 +148,10 @@ $username = $_SESSION["user"];
                         } else { ?>
                             <tr>
                                 <?php if ($_SESSION['level'] === "1") {
-                                    ?><td colspan="8">Tidak ada data</td>
+                                ?><td colspan="8">Tidak ada data</td>
                                 <?php
                                 } else {
-                                    ?><td colspan="9">Tidak ada data</td>
+                                ?><td colspan="9">Tidak ada data</td>
                                 <?php
                                 }
                                 ?>

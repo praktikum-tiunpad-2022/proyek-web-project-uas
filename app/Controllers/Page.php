@@ -20,6 +20,10 @@ class Page extends BaseController
     {
         return view('page/password');
     }
+    public function profile()
+    {
+        return view('page/profile');
+    }
     public function dashboard()
     {
         return view('page/dashboard');

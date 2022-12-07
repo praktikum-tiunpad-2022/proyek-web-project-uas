@@ -1,11 +1,20 @@
 <?php
-session_start();
-include 'index.php';
-$level = $_SESSION["level"];
-$username = $_SESSION["user"];
+    session_start();
+    include 'index.php';
+    $level = $_SESSION["level"];
+    $username = $_SESSION["user"];
 
-?>
+    if ($_SESSION["level"] == "") {
+        header("location:login");
+    } else {
+        $sql = "SELECT * FROM users where username='" . $username . "'";
+    }
 
+    $hasil = $koneksi->query($sql);
+
+    $row = $hasil->fetch_object();
+
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,11 +22,11 @@ $username = $_SESSION["user"];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Data</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Form Biodata</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -73,37 +82,52 @@ $username = $_SESSION["user"];
                 <div class="btn-okay"><a href="streaming">Kembali</a></div>
                 </p>
                 <form action="" method="POST" style="text-align: center;">
-                    <input type="text" name="id_data" placeholder="Kode Streaming" class="input-control" required>
-                    <input type="text" name="judul" placeholder="Judul" class="input-control" required>
-                    <input type="text" name="tahun" placeholder="Tahun Rilis" class="input-control" required>
-                    <input type="text" name="id_negara" placeholder="Asal Negara (cn/jpn/id/tl/kr/hk/us)" class="input-control" required>
-                    <input type="text" name="id_kategori" placeholder="Kategori (drama/movies/series/tvshow)" class="input-control" required>
-                    <input type="text" name="status" placeholder="Status (wishlist/ongoing/finished)" class="input-control" required>
-                    <input type="submit" name="add_data" value="Add data" class="btn">
+                    <input type="text" name="username" placeholder="Username" class="input-control" value="<?php echo $row->username ?>" readonly>
+                    <input type="text" name="email" placeholder="Email" class="input-control" value="<?php echo $row->email ?>" required>
+                    <input type="text" name="nama" placeholder="Nama" class="input-control" value="<?php echo $row->nama ?>" required>
+                    <input type="submit" name="update_data" value="Update data" class="btn">
                 </form>
                 <?php
-                if (isset($_POST['add_data'])) {
-                    $id_data = $_POST['id_data'];
-                    $judul = ucwords($_POST['judul']);
-                    $tahun = $_POST['tahun'];
-                    $status = ucwords($_POST['status']);
-                    $id_kategori = ($_POST['id_kategori']);
-                    $id_negara = ($_POST['id_negara']);
+                if (isset($_POST['update_data'])) {
+                    $email = $_POST['email'];
+                    $nama = ucwords($_POST['nama']);
 
-                    $insert = mysqli_query($koneksi, "INSERT into data VALUES ('" . $judul . "','" . $tahun . "','" . $id_negara . "','" . $id_kategori . "','" . $id_data . "','" . $username . "','" . $status . "')");
-                    if ($insert) {
-                        echo '<script>alert("Data berhasil ditambahkan!")</script>>';
-                        echo '<script>window.location="streaming"</script>';
+                    $update = mysqli_query($koneksi, "UPDATE users SET email='" . $email . "', 
+                                                                    nama='" . $nama . "'
+                                                                    where username='" . $username. "'");
+                    if ($update) {
+                        echo '<script>alert("Profil berhasil diperbarui!")</script>';
+                        echo '<script>window.location="profil"</script>';    
                     } else {
-                        echo 'Data gagal ditambahkan!' . mysqli_error($koneksi);
+                        echo 'Data gagal diperbarui!' . mysqli_error($koneksi);
                     }
                 }
                 ?>
             </div>
         </div>
-        <div class="container3">
+        <div class="container2">
+            <div class="box3">
+        <h5 style="text-align: center;"><b>Ubah Password</b></h5>
+		<form action="" method="post">
+			<input type="password" name="pass" placeholder="New Password" class="input-control">
+			<input type="submit" name="submit" value="Submit" class="btn-login">
+		</form>
+		<?php
+		if (isset($_POST['submit'])) {
+			$pass = $_POST['pass'];
 
+			$update = mysqli_query($koneksi, "UPDATE users SET password='" . MD5($pass) . "'
+                                                                    where username='" . $_SESSION['user'] . "'");
+			if ($update) {
+				echo '<script>alert("Password berhasil diperbarui!")</script>';
+				echo '<script>window.location="profil"</script>';
+			} else {
+				echo 'Data gagal diperbarui!' . mysqli_error($koneksi);
+			}
+		}
+		?>
         </div>
+
     </div>
 
     <!--footer-->

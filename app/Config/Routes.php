@@ -41,6 +41,7 @@ $routes->get('/', 'Page::login');
 $routes->get('/logout', 'Page::logout');
 $routes->get('/register', 'Page::register');
 $routes->get('/password', 'Page::password');
+$routes->get('/profile', 'Page::profile');
 $routes->get ('/streaming', 'Page::streaming');
 $routes->get ('/edit', 'Page::edit');
 $routes->get ('/add', 'Page::add');
@@ -51,6 +52,7 @@ $routes->post('/register', 'Page::register');
 $routes->post('/password', 'Page::password');
 $routes->post ('/edit', 'Page::edit');
 $routes->post ('/add', 'Page::add');
+$routes->post('/profile', 'Page::profile');
 
 
 /*

@@ -18,6 +18,23 @@ include 'index.php';
 </head>
 
 <body>
+	<header>
+		<div class="container" style="background-color: #555555; color: #ffffff;">
+			<ul style="list-style-type: none;">
+				<li style="display: inline-block">
+					<h1><a href="dashboard"></a>MyStreamingList</h1>
+				</li>
+				<li style="display: inline-block; float: right;margin-left:20px;"><a href="/">
+						<div class="btn2">Login</div>
+					</a>
+				</li>
+				<li style="display: inline-block;  float: right;" ;><a href="register">
+						<div class="btn2">Sign Up</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</header>
 	<div class="box-login">
 		<h5 style="text-align: center;"><b>Forgot Password</b></h5>
 		<form action="" method="post">
@@ -26,21 +43,21 @@ include 'index.php';
 			<input type="submit" name="submit" value="Submit" class="btn-login">
 		</form>
 		<?php
-                if (isset($_POST['submit'])) {
-                    $username = ($_POST['user']);
-                    $pass = $_POST['pass'];
+		if (isset($_POST['submit'])) {
+			$username = ($_POST['user']);
+			$pass = $_POST['pass'];
 
-                    $update = mysqli_query($koneksi, "UPDATE users SET password='" . MD5($pass) . "'
+			$update = mysqli_query($koneksi, "UPDATE users SET password='" . MD5($pass) . "'
                                                                     where username='" . $username . "'
 																	or email='" . $username . "'");
-                    if ($update) {
-                        echo '<script>alert("Password berhasil diperbarui!")</script>';
-                        echo '<script>window.location="/"</script>';
-                    } else {
-                        echo 'Data gagal diperbarui!' . mysqli_error($koneksi);
-                    }
-                }
-                ?>
+			if ($update) {
+				echo '<script>alert("Password berhasil diperbarui!")</script>';
+				echo '<script>window.location="/"</script>';
+			} else {
+				echo 'Data gagal diperbarui!' . mysqli_error($koneksi);
+			}
+		}
+		?>
 	</div>
 
 	<footer>
